@@ -1,0 +1,28 @@
+{
+  "name": "movieWebsite",
+  "version": "0.0.1",
+  "authors": [
+    "yanze123 <462865314 @qq.com>"
+  ],
+  "description": "node.js+express+jade+mongodb",
+  "main": "app.js",
+  "keywords": [
+    "node.js"
+  ],
+  "license": "MIT",
+  "homepage": "www.imyy.org",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.2.0"
+  }
+}
+
+    Status API Training Shop Blog About 
+

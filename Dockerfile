@@ -1,10 +1,9 @@
-FROM daocloud.io/library/ubuntu:16.04
-
+FROM daocloud.io/library/ubuntu:14.04
 MAINTAINER yanze123 462865314@qq.com
 
 RUN sed -i 's/archive/cn.archive/g' /etc/apt/sources.list
 
-RUN apt-get update
+RUN apt-get update 
 RUN mkdir -p /app
 WORKDIR /app
 

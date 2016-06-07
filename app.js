@@ -15,6 +15,7 @@ var fs = require('fs')
 
 mongoose.connect(dbUrl)
 
+
 // models loading
 var models_path = __dirname + '/app/models'
 var walk = function(path) {

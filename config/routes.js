@@ -23,23 +23,23 @@ module.exports = function(app) {
   app.get('/signup', User.showSignup)
   app.get('/signin', User.showSignin)
   app.get('/logout', User.logout)
-  app.get('/admin/user/list', User.signinRequired, User.adminRequired, User.list)
+  app.get('/admin/user/list', User.signinRequired, User.list)
 
 // Movie
   app.get('/movie/:id', Movie.detail)
-  app.get('/admin/movie/new', User.signinRequired, User.adminRequired, Movie.new)
-  app.get('/admin/movie/update/:id', User.signinRequired, User.adminRequired, Movie.update)
-  app.post('/admin/movie', User.signinRequired, User.adminRequired, Movie.savePoster, Movie.save)
-  app.get('/admin/movie/list', User.signinRequired, User.adminRequired, Movie.list)
-  app.delete('/admin/movie/list', User.signinRequired, User.adminRequired, Movie.del)
+  app.get('/admin/movie/new', User.signinRequired, Movie.new)
+  app.get('/admin/movie/update/:id', User.signinRequired, Movie.update)
+  app.post('/admin/movie', User.signinRequired, Movie.savePoster, Movie.save)
+  app.get('/admin/movie/list', User.signinRequired, Movie.list)
+  app.delete('/admin/movie/list', User.signinRequired, Movie.del)
 
 // Comment
   app.post('/user/comment', User.signinRequired, Comment.save)
 
 // Category
-  app.get('/admin/category/new', User.signinRequired, User.adminRequired, Category.new)
-  app.post('/admin/category', User.signinRequired, User.adminRequired, Category.save)
-  app.get('/admin/category/list', User.signinRequired, User.adminRequired, Category.list)  
+  app.get('/admin/category/new', User.signinRequired, Category.new)
+  app.post('/admin/category', User.signinRequired, Category.save)
+  app.get('/admin/category/list', User.signinRequired, Category.list)  
 
 // results
   app.get('/results', Index.search)

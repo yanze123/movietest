@@ -51,7 +51,7 @@ exports.signin = function(req, res){
       console.log(err)
     }
     if(!user){
-      res.redirect('/signup')
+      return res.redirect('/signup')
     }
     user.comparePassword(password, function(err, isMatch){
       if(err){
